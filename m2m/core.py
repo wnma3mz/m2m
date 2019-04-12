@@ -3,7 +3,6 @@ import os
 import sys
 import re
 from bs4 import BeautifulSoup
-from dotenv import load_dotenv
 from medium_to_markdown import MediumToMarkdown
 from requests import get
 

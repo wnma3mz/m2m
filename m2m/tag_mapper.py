@@ -1,6 +1,5 @@
 # coding: utf8
 from functools import reduce
-from gist_to_codeblock import GistToCodeblock
 from urllib.parse import unquote
 
 
@@ -80,8 +79,6 @@ class TagMapper:
     def markdown_image(self):
         if self.tag.img:
             return f"![]({self.tag.img['src']})"
-        elif self.tag.iframe:
-            return GistToCodeblock(self.tag).transform()
 
     def markdown_blockquote(self):
         return f"> {self.tag.text}"
